@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft - Building & Crafting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gameplay.html">Gameplay</a></li>
+            <li><a href="building.html">Building & Crafting</a></li>
+            <li><a href="community.html">Community & Mods</a></li>
+        </ul>
+    </nav>
+
+    <h1>Building & Crafting in Minecraft</h1>
+    <p>Discover the art of building and crafting in Minecraft...</p>
+
+    <h2>Impressive Builds</h2>
+    <p>Check out these amazing Minecraft builds, and share your own building experiences using the form below!</p>
+
+    <!-- Form with fields related to Minecraft Building & Crafting -->
+    <form id="minecraft-building-form">
+        <label for="minecraft-username">Minecraft Username:</label>
+        <input type="text" name="minecraft-username" required>
+
+        <label for="favorite-block">Favorite Block to Build With:</label>
+        <input type="text" name="favorite-block" required>
+
+        <label for="build-style">Preferred Building Style:</label>
+        <select name="build-style" required>
+            <option value="">Select a style</option>
+            <option value="Medieval">Medieval</option>
+            <option value="Modern">Modern</option>
+            <option value="Futuristic">Futuristic</option>
+            <option value="Rustic">Rustic</option>
+        </select>
+
+        <label for="build-date">Date of Favorite Build:</label>
+        <input type="date" name="build-date" required>
+
+        <label for="build-rating">Rate Your Favorite Build (1-10):</label>
+        <input type="range" name="build-rating" min="1" max="10" required>
+
+        <label for="agreed">I agree to share my Minecraft building experiences:</label>
+        <input type="checkbox" name="agreed" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="error-message" style="color: red;"></p>
+
+    <!--
+    Project 6, 3rd requirement: Necessity of Validation and XSS Attack Planning
+
+    Web security requires validation because it shields a website and its visitors from a variety of threats, such as Cross-Site Scripting (XSS). 
+    We can give users instant feedback and stop invalid data from being transferred to the server by verifying input on the client side. 
+    However, client-side validation alone is not enough, as attackers can bypass it by using tools to manipulate form submissions. 
+    In order to completely inspect and sanitize inputs and guarantee that only valid data is processed and stored, server-side validation must also be implemented.
+
+    Inadequate validation frequently results in vulnerabilities like XSS, which allows an attacker to insert malicious code into input fields. 
+    If these scripts are not cleaned up, other website visitors may run them and take advantage of them, which could result in data theft, session hijacking, or other illegal activities. 
+    For instance, if JavaScript could be entered into the "Minecraft Username" field of this form, it could be saved and run each time the form's data is shown. 
+    Because of this, input sanitization and validation are essential procedures for safeguarding websites and averting potential exploitation.
+-->
+    <!-- Link to the external JavaScript file (form validation is in there) -->
+    <script src="proj6.js"></script>
+</body>
+
+</html>

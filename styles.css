@@ -1,0 +1,41 @@
+/* Center alignment for an area of the page */
+.center {
+    text-align: center;
+    color: #4b0082;
+}
+
+/* Background page color */
+body {
+    background-color: #faf0e6;
+    font-family: 'Verdana', sans-serif;
+    line-height: 1.6;
+}
+
+/* Another style: Padding for text within highlighted areas */
+#highlight {
+    background-color: #fffacd;
+    padding: 15px;
+}
+
+/* At least 1 different text color */
+p {
+    color: darkolivegreen;
+}
+
+/* A different font size */
+h1 {
+    font-size: 28px;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 600px) {
+    body {
+        background-color: #dcdcdc; /* Light Gray background for small screens */
+    }
+    h1 {
+        font-size: 24px; /* Smaller font size for small screens */
+    }
+    p {
+        font-size: 14px; /* Smaller font size for small screens */
+    }
+}

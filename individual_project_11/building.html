@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft - Building & Crafting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gameplay.html">Gameplay</a></li>
+            <li><a href="building.html">Building & Crafting</a></li>
+            <li><a href="community.html">Community & Mods</a></li>
+            <li><a href="game.html">Puzzle Game</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <h1>Building & Crafting in Minecraft</h1>
+        <p>Discover the art of building and crafting in Minecraft...</p>
+
+        <h2>Impressive Builds</h2>
+        <p>Check out these amazing Minecraft builds, and share your own building experiences using the form below!</p>
+
+        <!-- Form with fields related to Minecraft Building & Crafting -->
+        <form id="minecraft-building-form">
+            <label for="minecraft-username">Minecraft Username:</label>
+            <input type="text" name="minecraft-username" required>
+
+            <label for="favorite-block">Favorite Block to Build With:</label>
+            <input type="text" name="favorite-block" required>
+
+            <label for="build-style">Preferred Building Style:</label>
+            <select name="build-style" required>
+                <option value="">Select a style</option>
+                <option value="Medieval">Medieval</option>
+                <option value="Modern">Modern</option>
+                <option value="Futuristic">Futuristic</option>
+                <option value="Rustic">Rustic</option>
+            </select>
+
+            <label for="build-date">Date of Favorite Build:</label>
+            <input type="date" name="build-date" required>
+
+            <label for="build-rating">Rate Your Favorite Build (1-10):</label>
+            <input type="range" name="build-rating" min="1" max="10" required>
+
+            <label for="agreed">I agree to share my Minecraft building experiences:</label>
+            <input type="checkbox" name="agreed" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <p id="error-message" style="color: red;"></p>
+    </div>
+
+    <!-- Link to the external JavaScript file that contains the MinecraftBuild object constructor and its methods -->
+    <script src="objects.js"></script>
+
+    <!-- Link to the external JavaScript file (proj6.js) that handles form submission and uses the MinecraftBuild object -->
+    <script src="proj8.js"></script>
+
+    <!--
+    This is where the MinecraftBuild object is used. 
+    When the user submits the form, the proj8.js file captures the form data and creates an instance of the MinecraftBuild object.
+    The object manages the Minecraft build details such as username, favorite block, build style, build date, and rating. 
+    It also validates the form input (e.g., rating validation) and displays the submitted information through the object's methods.
+    -->
+</body>
+
+</html>

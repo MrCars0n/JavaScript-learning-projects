@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gameplay.html">Gameplay</a></li>
+            <li><a href="building.html">Building & Crafting</a></li>
+            <li><a href="community.html">Community & Mods</a></li>
+            <li><a href="game.html">Puzzle Game</a></li>
+        </ul>
+    </nav>
+
+    <h1>Welcome to Minecraft Hub</h1>
+    <p id="welcome"></p>
+
+    <h2>Click on an image to view it in full screen</h2>
+    <p>Explore different Minecraft scenes by clicking on the images below. Click anywhere outside the image to close the overlay.</p>
+
+    <!-- Gallery Section -->
+    <div class="gallery">
+        <img src="images/minecraft1.jpg" alt="Minecraft Landscape" onclick="openOverlay(this)">
+        <img src="images/minecraft2.jpg" alt="Minecraft Building" onclick="openOverlay(this)">
+        <img src="images/minecraft3.jpg" alt="Minecraft Main Character: STEVE" onclick="openOverlay(this)">
+    </div>
+
+    <!-- Overlay Container -->
+    <div id="overlay" onclick="closeOverlay()">
+        <span class="close">&times;</span>
+        <img class="overlay-content" id="overlay-img">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Use of a variable, Use getElementById() method, JS styling, 
+        //   and Basic JS commenting explaining my example
+        var welcomeMessage = "Welcome to the Minecraft Hub! A website designed to help you learn more about the popular video game Minecraft.";
+        document.getElementById("welcome").innerHTML = welcomeMessage;
+        document.getElementById("welcome").style.color = "green";
+        document.getElementById("welcome").style.fontSize = "24px";
+
+        // Function to open overlay
+        function openOverlay(element) {
+            var overlay = document.getElementById("overlay");
+            var overlayImg = document.getElementById("overlay-img");
+            var captionText = document.getElementById("caption");
+
+            overlay.style.display = "flex";
+            overlayImg.src = element.src;
+            captionText.innerHTML = element.alt;
+        }
+
+        // Function to close overlay
+        function closeOverlay() {
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
