@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft - Gameplay</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gameplay.html">Gameplay</a></li>
+            <li><a href="building.html">Building & Crafting</a></li>
+            <li><a href="community.html">Community & Mods</a></li>
+        </ul>
+    </nav>
+
+    <h1>Minecraft Gameplay</h1>
+    <p>Minecraft offers various modes like Survival, Creative, and Multiplayer...</p>
+
+    <h2>Calculate Your Yearly Minecraft Hours</h2>
+    <form onsubmit="return calculateHours()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="hours">Hours played per week:</label>
+        <input type="number" id="hours" name="hours" required><br><br>
+
+        <input type="submit" value="Calculate">
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        // Function to calculate the total hours played in a year
+        function calculateHours() {
+            // Retrieve the user's name
+            var userName = document.getElementById("name").value;
+
+            // Retrieve the number of hours played per week
+            var hoursPerWeek = document.getElementById("hours").value;
+
+            // Calculate the total hours played in a year (52 weeks)
+            var yearlyHours = hoursPerWeek * 52;
+
+            // Display the result to the user
+            document.getElementById("result").innerHTML = userName + ", you play Minecraft for approximately " + yearlyHours + " hours per year!";
+
+            // Prevent form submission
+            return false;
+        }
+    </script>
+</body>
+</html>

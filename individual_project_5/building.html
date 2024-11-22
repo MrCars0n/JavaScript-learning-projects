@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft - Building & Crafting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gameplay.html">Gameplay</a></li>
+            <li><a href="building.html">Building & Crafting</a></li>
+            <li><a href="community.html">Community & Mods</a></li>
+        </ul>
+    </nav>
+
+    <h1>Building & Crafting in Minecraft</h1>
+    <p>Discover the art of building and crafting in Minecraft...</p>
+
+    <h2>Impressive Builds</h2>
+    <p>Check out these amazing Minecraft builds, and share your own building experiences using the form below!</p>
+
+    <!-- Form with fields related to Minecraft Building & Crafting -->
+    <form id="minecraft-building-form">
+        <label for="minecraft-username">Minecraft Username:</label>
+        <input type="text" id="minecraft-username" name="minecraft-username" required>
+
+        <label for="favorite-block">Favorite Block to Build With:</label>
+        <input type="text" id="favorite-block" name="favorite-block" required>
+
+        <label for="build-style">Preferred Building Style (e.g., Medieval, Modern, etc.):</label>
+        <input type="text" id="build-style" name="build-style" required>
+
+        <label for="favorite-tool">Favorite Tool for Crafting:</label>
+        <input type="text" id="favorite-tool" name="favorite-tool" required>
+
+        <label for="build-description">Describe Your Favorite Build:</label>
+        <textarea id="build-description" name="build-description" required></textarea>
+
+        <label for="agreed">I agree to share my Minecraft building experiences:</label>
+        <input type="checkbox" id="agreed" name="agreed" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="error-message" style="color: red;"></p>
+
+    <script>
+        /*
+        Project 4, 2nd requirement: Debugging Methods
+
+        In developing this form, several debugging methods outlined in "JavaScript for Web Warriors" (Carey & Vodnik, 2022) were used. One key method is the use of `console.log` statements to track the flow of the program and examine the values of variables during execution. 
+        As described by Carey and Vodnik (2022), logging values to the console is an effective way to trace program behavior without disrupting its flow, especially compared to using alert boxes (p. 131). Another method implemented is the `try-catch` statement to handle exceptions during form submission. 
+        The textbook emphasizes that the `try-catch` statement is essential for managing errors and preventing the program from halting unexpectedly (Carey & Vodnik, 2022, p. 145). By catching errors such as incomplete or invalid input, the program ensures a smoother user experience by displaying relevant messages without crashing (Carey & Vodnik, 2022, p. 148). 
+        These methods enhance the reliability of the form and align with best practices for debugging JavaScript code.
+
+        Carey, P., & Vodnik, S. (2022). JavaScript for Web Warriors (7th ed.). Cengage Learning. ISBN: 978-0-357-63800-2.
+        */
+
+        // Function to handle form submission and prevent default behavior
+        document.getElementById('minecraft-building-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting by default
+            try {
+                const username = document.getElementById('minecraft-username').value;
+                const favoriteBlock = document.getElementById('favorite-block').value;
+                const buildStyle = document.getElementById('build-style').value;
+                const favoriteTool = document.getElementById('favorite-tool').value;
+                const buildDescription = document.getElementById('build-description').value;
+                const agreed = document.getElementById('agreed').checked;
+
+                // Validate form fields
+                if (!username || !favoriteBlock || !buildStyle || !favoriteTool || !buildDescription || !agreed) {
+                    throw "Please fill in all fields and agree to share your experiences.";
+                }
+
+                console.log("Form submitted successfully with the following data:");
+                console.log({
+                    username,
+                    favoriteBlock,
+                    buildStyle,
+                    favoriteTool,
+                    buildDescription
+                });
+
+                document.getElementById('error-message').textContent = '';
+                
+                // Alert for successful submission
+                alert('Form submitted successfully!');
+
+                // Reset the form
+                document.getElementById('minecraft-building-form').reset();
+            } catch (error) {
+                console.log(error);
+                document.getElementById('error-message').textContent = error;
+            }
+        });
+    </script>
+</body>
+
+</html>

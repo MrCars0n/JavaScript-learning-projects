@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft - Food Statistics</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="final.js" defer></script>
+    <style>
+        .center-image {
+            display: block;
+            margin: 20px auto;
+            max-width: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gameplay.html">Gameplay</a></li>
+            <li><a href="building.html">Building & Crafting</a></li>
+            <li><a href="community.html">Community & Mods</a></li>
+            <li><a href="game.html">Puzzle Game</a></li>
+            <li><a href="statistics.html">Food Statistics</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <h1>Minecraft Food Statistics</h1>
+        
+        <p>This chart showcases popular Minecraft food items and their respective food points.</p>
+        
+        
+        <!-- Chart container -->
+        <div style="width: 80%; max-width: 600px; margin: auto;">
+            <canvas id="foodChart"></canvas>
+        </div>
+        
+        <img src="images/hunger.png" alt="Hunger Bar" class="center-image">
+    </div>
+</body>
+
+</html>

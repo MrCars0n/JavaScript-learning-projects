@@ -1,0 +1,89 @@
+/* General body styling */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styling */
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+/* Heading styling */
+h1 {
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* General paragraph styling */
+p {
+    color: #555;
+    padding: 0 20px;
+}
+
+/* Form styling */
+form {
+    padding: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button styling with graphical feedback */
+input[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+input[type="button"]:hover {
+    background-color: #45a049;
+}
